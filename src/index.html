@@ -3,28 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="./assets/icons/icon-location.svg" type="image/svg+xml" sizes="any">
+  <link rel="icon" href="../assets/icons/icon-location.svg" type="image/svg+xml" sizes="any">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;500;700;900&family=Outfit:wght@100;200;300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
   <link href="../dist/output.css" rel="stylesheet">
 
   <title>Art Gallery Website</title>
 </head>
 <body>
-  <header>
-    <img src="./assets/img/hero.jpg" alt="Gallery photo">
-    <h1 class="main-title">Modern Art Gallery</h1>
-    <p class="subtitle">
-      The arts in the collection of the Modern Art Gallery all started from a spark of inspiration. Will these pieces inspire you? Visit us and find out.
-    </p>
-    <a href="#map">Our location</a>
+  <header class="pb-20">
+    <div class="header-bg | min-h-60 bg-center bg-cover bg-no-repeat" style="background-image: url('../assets/img/hero.jpg')">
+    </div>
+    <div class="wrapper">
+      <div class="main-title | my-8">
+        <h1 class="text-6xl leading-[3.5rem]">Modern <br> Art Gallery</h1>
+      </div>
+      <p class="subtitle">
+        The arts in the collection of the Modern Art Gallery all started from a spark of inspiration. Will these pieces inspire you? Visit us and find out.
+      </p>
+      <button class="flex my-8 text-white text-xl tracking-[.15em] bg-dark transition-colors duration-500 | hover:text-dark hover:bg-accent" onclick="scrollToMap()">
+        <p class="py-6 px-8">Our location</p>
+        <div class="p-6 bg-accent">
+          <svg class="inline-block" width="10" height="24" xmlns="http://www.w3.org/2000/svg"><path stroke="#FFF" fill="none" d="m1 0 8 12-8 12"/></svg>
+        </div>
+      </button>
+    </div>
   </header>
-
+  
   <main>
     <section class="gallery">
       <div class="row">
-        <img src="./assets/img/grid-1.jpg" alt="Gallery photo">
+        <img src="../assets/img/grid-1.jpg" alt="Gallery photo">
         <div class="gallery-info">
           <h2 class="gallery-title">Your day at the gallery</h2>
           <p class="gallery-text">
@@ -33,8 +43,8 @@
         </div>
       </div>
       <div class="row">
-        <img src="./assets/img/grid-2.jpg" alt="Gallery photo">
-        <img src="./assets/img/grid-3.jpg" alt="Gallery photo">
+        <img src="../assets/img/grid-2.jpg" alt="Gallery photo">
+        <img src="../assets/img/grid-3.jpg" alt="Gallery photo">
         <div class="inspiration-info">
           <h2 class="inspiration-title">Come & Be inspired</h2>
           <p class="inspiration-text">
@@ -62,7 +72,7 @@
   </main>
 
   <footer>
-    <a href="#" class="logo"><img src="./assets/icons/logo-dark.svg" alt="Gallery Logo" class="logo"></a>    
+    <a href="#" class="logo"><img src="../assets/icons/logo-dark.svg" alt="Gallery Logo" class="logo"></a>    
     <p class="footer-text">
       The Modern Art Gallery is free to all visitors and open seven days a week from 8am to 9pm. Find us at 99 King Street, Newport, USA.
     </p>
@@ -78,5 +88,10 @@
       </a>
     </div>
   </footer>
+  <script>
+    function scrollToMap(){
+      document.getElementById("map").scrollIntoView({behavior: 'smooth'});
+    }
+  </script>
 </body>
 </html>

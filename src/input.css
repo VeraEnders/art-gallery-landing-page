@@ -1,3 +1,36 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@layer base {
+  :root {
+    --clr-text-dark: #151515;
+    --clr-text-neutral: #4E4D4B;
+  }
+
+  body {
+    font-family: 'Outfit', system-ui, sans-serif;
+    font-weight: 300;
+    font-size: 1.125rem;
+    color: var(--clr-text-neutral);
+  }
+
+  h1, h2, h3, button {
+    font-family: 'Big Shoulders Display', system-ui, sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--clr-text-dark);
+  }
+}
+
+@layer utilities {
+  .wrapper {
+    padding-inline: 1rem;
+  }
+}
