@@ -12,22 +12,26 @@
   <title>Art Gallery Website</title>
 </head>
 <body>
-  <header class="pb-20">
-    <div class="header-bg | min-h-60 bg-center bg-cover bg-no-repeat" style="background-image: url('../assets/img/hero.jpg')">
+  <header class="pb-20 | md:relative md:h-screen">
+    <div class="header-bg | min-h-60 bg-center bg-cover bg-no-repeat transition-all duration-300 | md:min-h-[43.7rem] md:bg-contain md:bg-[left_-1.3rem_top]" style="background-image: url('../assets/img/hero.jpg')">
     </div>
     <div class="wrapper">
-      <div class="main-title | my-8">
-        <h1 class="text-6xl leading-[3.5rem]">Modern <br> Art Gallery</h1>
-      </div>
-      <p class="subtitle">
-        The arts in the collection of the Modern Art Gallery all started from a spark of inspiration. Will these pieces inspire you? Visit us and find out.
-      </p>
-      <button class="flex my-8 text-white text-xl tracking-[.15em] bg-dark transition-colors duration-500 | hover:text-dark hover:bg-accent" onclick="scrollToMap()">
-        <p class="py-6 px-8">Our location</p>
-        <div class="p-6 bg-accent">
-          <svg class="inline-block" width="10" height="24" xmlns="http://www.w3.org/2000/svg"><path stroke="#FFF" fill="none" d="m1 0 8 12-8 12"/></svg>
+      <div class="md:absolute md:top-[6.8rem] md:left-[24.3rem]">
+        <div class="my-8 | md:my-9">
+          <h1 class="text-6xl leading-[3.5rem] transition-all duration-700 | md:text-7xl md:leading-[4rem]">Modern <br> Art Gallery</h1>
         </div>
-      </button>
+        <p class="md:mt-[3.2rem] md:max-w-xs">
+          The arts in the collection of the Modern Art Gallery all started from a spark of inspiration. Will these pieces inspire you? Visit us and find out.
+        </p>
+        <div class="my-8 | md:my-12">
+          <button class="flex text-white text-xl tracking-[.15em] bg-dark transition-colors duration-500 | hover:text-dark hover:bg-accent" onclick="scrollToMap()">
+            <p class="py-6 px-8">Our location</p>
+            <div class="p-6 bg-accent">
+              <svg class="inline-block" width="10" height="24" xmlns="http://www.w3.org/2000/svg"><path stroke="#FFF" fill="none" d="m1 0 8 12-8 12"/></svg>
+            </div>
+          </button>
+        </div>
+      </div>
     </div>
   </header>
   
