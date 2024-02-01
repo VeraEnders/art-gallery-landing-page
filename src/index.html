@@ -12,48 +12,58 @@
   <title>Art Gallery Website</title>
 </head>
 <body>
-  <header class="pb-20 | md:relative md:h-screen">
-    <div class="header-bg | min-h-60 bg-center bg-cover bg-no-repeat transition-all duration-300 | md:min-h-[43.7rem] md:bg-contain md:bg-[left_-1.3rem_top]" style="background-image: url('../assets/img/hero.jpg')">
+  <header class="min-h-[90vh] | md:min-h-[96vh] md:relative lg:bg-gradient-to-l from-white from-50% to-dark to-50%">
+    <div class="animate-showBackground min-h-[29vh] bg-center bg-cover bg-no-repeat | md:min-h-[84vh] md:bg-contain md:bg-[left_-1.3rem_top] lg:min-h-[96vh] lg:bg-center" style="background-image: url('../assets/img/hero.jpg')">
     </div>
     <div class="wrapper">
-      <div class="md:absolute md:top-[6.8rem] md:left-[24.3rem]">
-        <div class="my-8 | md:my-9">
-          <h1 class="text-6xl leading-[3.5rem] transition-all duration-700 | md:text-7xl md:leading-[4rem]">Modern <br> Art Gallery</h1>
-        </div>
-        <p class="md:mt-[3.2rem] md:max-w-xs">
-          The arts in the collection of the Modern Art Gallery all started from a spark of inspiration. Will these pieces inspire you? Visit us and find out.
-        </p>
-        <div class="my-8 | md:my-12">
-          <button class="flex text-white text-xl tracking-[.15em] bg-dark transition-colors duration-500 | hover:text-dark hover:bg-accent" onclick="scrollToMap()">
-            <p class="py-6 px-8">Our location</p>
-            <div class="p-6 bg-accent">
-              <svg class="inline-block" width="10" height="24" xmlns="http://www.w3.org/2000/svg"><path stroke="#FFF" fill="none" d="m1 0 8 12-8 12"/></svg>
+      <div class="md:absolute md:top-28 md:right-12 lg:top-[19.5%] lg:left-[11.6%] 2xl:inset-x-auto">
+        <div class="lg:flex lg:gap-[19rem]">
+          <div class="my-8 | md:my-9">
+            <h1 class="text-6xl leading-[3.5rem] | md:text-7xl md:leading-[4rem] lg:text-white lg:mix-blend-difference xl:text-8xl xl:leading-[5.4rem]">Modern <br> Art Gallery</h1>
+          </div>
+          <div>
+            <p class="md:mt-[3.2rem] md:max-w-xs lg:mt-[1.9rem] lg:max-w-[22rem] lg:text-2xl lg:leading-8 lg:tracking-[-0.9px]">
+              The arts in the collection of the Modern Art Gallery all started from a spark of inspiration. Will these pieces inspire you? Visit us and find out.
+            </p>
+            <!-- Button -->
+            <div class="my-8 | md:my-12 lg:mt-16 lg:mr-20">
+              <div class="flex max-w-[16.4rem] text-white text-xl tracking-[.15em] bg-dark | hover:text-dark hover:bg-accent">
+                <a href="#map" class="grow py-6 px-8">Our location</a>
+                <a href="#map" class="p-6 bg-accent">
+                  <svg  width="10" height="24" xmlns="http://www.w3.org/2000/svg"><path stroke="#FFF" fill="none" d="m1 0 8 12-8 12"/></svg>
+                </a>
+              </div>
             </div>
-          </button>
+          </div>
         </div>
       </div>
     </div>
   </header>
   
   <main>
-    <section class="gallery">
-      <div class="row">
-        <img src="../assets/img/grid-1.jpg" alt="Gallery photo">
-        <div class="gallery-info">
-          <h2 class="gallery-title">Your day at the gallery</h2>
-          <p class="gallery-text">
-            Wander through our distinct collections and find new about our artists. Dive into the details of their creative process
-          </p>
+    <!-- Gallery -->
+    <section class="mb-32">
+      <div class="wrapper">
+        <div class="flex flex-col gap-7 md:flex-row-reverse">
+          <img class="min-h-80" src="../assets/img/grid-1.jpg" alt="Gallery photo">
+          <div>
+            <h2>Your day <br> at the gallery</h2>
+            <p class="mt-5">
+              Wander through our distinct collections and find new about our artists. Dive into the details of their creative process.
+            </p>
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <img src="../assets/img/grid-2.jpg" alt="Gallery photo">
-        <img src="../assets/img/grid-3.jpg" alt="Gallery photo">
-        <div class="inspiration-info">
-          <h2 class="inspiration-title">Come & Be inspired</h2>
-          <p class="inspiration-text">
-            We’re excited to welcome you to our gallery and see how our collections influence you.
-          </p>
+        <div class="mt-16 flex flex-col gap-5">
+          <img class="min-h-[30rem]" src="../assets/img/grid-2.jpg" alt="Gallery photo">
+          <div class="flex flex-col gap-5">
+            <img class="max-h-48" src="../assets/img/grid-3.jpg" alt="Gallery photo">
+            <div class="px-6 py-12 bg-dark">
+              <h2 class="text-white">Come & Be inspired</h2>
+              <p class="pt-6 text-white opacity-80">
+                We’re excited to welcome you to our gallery and see how our collections influence you.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -92,10 +102,5 @@
       </a>
     </div>
   </footer>
-  <script>
-    function scrollToMap(){
-      document.getElementById("map").scrollIntoView({behavior: 'smooth'});
-    }
-  </script>
 </body>
 </html>
