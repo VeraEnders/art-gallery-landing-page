@@ -17,6 +17,7 @@ img {
   :root {
     --clr-text-dark: #151515;
     --clr-text-neutral: #4E4D4B;
+    --clr-accent: #D5966B;
   }
 
   body {
@@ -49,15 +50,6 @@ img {
       line-height: 1;
     }
   }
-  
-  /* Animate a marker on the map */
-  @keyframes fade { 
-    from { opacity: 0.5; } 
-  }
-
-  .blinking {
-    animation: fade 1s infinite alternate;
-  }
 }
 
 @layer utilities {
@@ -76,5 +68,24 @@ img {
     .wrapper {
       max-width: 74rem;
     }
+  }
+}
+
+@layer components {
+  .socials svg {
+    fill: white;
+  }
+
+  .socials svg:hover {
+    fill: var(--clr-accent)
+  }
+
+  /* Animate a marker on the map */
+  @keyframes fade { 
+    from { opacity: 0.5; } 
+  }
+
+  .blinking {
+    animation: fade 1s infinite alternate;
   }
 }
