@@ -621,12 +621,12 @@ h2 {
   min-height: 90vh;
 }
 
-.max-w-\[16\.4rem\] {
-  max-width: 16.4rem;
+.w-\[16\.4rem\] {
+  width: 16.4rem;
 }
 
-.grow {
-  flex-grow: 1;
+.max-w-\[16\.4rem\] {
+  max-width: 16.4rem;
 }
 
 @keyframes bg {
@@ -645,6 +645,10 @@ h2 {
 
 .flex-col {
   flex-direction: column;
+}
+
+.justify-between {
+  justify-content: space-between;
 }
 
 .gap-5 {
@@ -903,11 +907,6 @@ img {
     background-position: left -1.3rem top;
   }
 
-  .md\:object-left {
-    -o-object-position: left;
-       object-position: left;
-  }
-
   .md\:py-20 {
     padding-top: 5rem;
     padding-bottom: 5rem;
@@ -940,16 +939,16 @@ img {
     margin-top: 4rem;
   }
 
+  .lg\:mt-8 {
+    margin-top: 2rem;
+  }
+
   .lg\:mt-\[1\.9rem\] {
     margin-top: 1.9rem;
   }
 
   .lg\:mt-\[11\.4rem\] {
     margin-top: 11.4rem;
-  }
-
-  .lg\:mt-8 {
-    margin-top: 2rem;
   }
 
   .lg\:flex {
@@ -964,41 +963,24 @@ img {
     max-width: 22rem;
   }
 
-  .lg\:max-w-full {
-    max-width: 100%;
-  }
-
-  .lg\:max-w-fit {
-    max-width: -moz-fit-content;
-    max-width: fit-content;
-  }
-
-  .lg\:max-w-none {
-    max-width: none;
-  }
-
   .lg\:max-w-\[39\.4rem\] {
     max-width: 39.4rem;
+  }
+
+  .lg\:max-w-full {
+    max-width: 100%;
   }
 
   .lg\:gap-28 {
     gap: 7rem;
   }
 
-  .lg\:gap-\[19rem\] {
-    gap: 19rem;
-  }
-
   .lg\:gap-8 {
     gap: 2rem;
   }
 
-  .lg\:gap-2 {
-    gap: 0.5rem;
-  }
-
-  .lg\:gap-1 {
-    gap: 0.25rem;
+  .lg\:gap-\[19rem\] {
+    gap: 19rem;
   }
 
   .lg\:bg-gradient-to-l {
