@@ -710,6 +710,10 @@ h2 {
   flex-direction: column;
 }
 
+.items-start {
+  align-items: flex-start;
+}
+
 .items-center {
   align-items: center;
 }
@@ -925,6 +929,11 @@ img {
     margin-bottom: 2.25rem;
   }
 
+  .md\:my-0 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
   .md\:mt-2 {
     margin-top: 0.5rem;
   }
@@ -943,6 +952,10 @@ img {
 
   .md\:mt-\[3\.2rem\] {
     margin-top: 3.2rem;
+  }
+
+  .md\:flex {
+    display: flex;
   }
 
   .md\:h-\[25rem\] {
@@ -970,6 +983,18 @@ img {
     min-height: 45rem;
   }
 
+  .md\:w-10 {
+    width: 2.5rem;
+  }
+
+  .md\:w-56 {
+    width: 14rem;
+  }
+
+  .md\:w-28 {
+    width: 7rem;
+  }
+
   .md\:max-w-\[24\.8rem\] {
     max-width: 24.8rem;
   }
@@ -978,12 +1003,45 @@ img {
     max-width: 20rem;
   }
 
+  .md\:max-w-max {
+    max-width: -moz-max-content;
+    max-width: max-content;
+  }
+
+  .md\:max-w-none {
+    max-width: none;
+  }
+
+  .md\:max-w-\[30\%\] {
+    max-width: 30%;
+  }
+
+  .md\:max-w-\[20\%\] {
+    max-width: 20%;
+  }
+
+  .md\:max-w-\[50\%\] {
+    max-width: 50%;
+  }
+
+  .md\:max-w-\[40\%\] {
+    max-width: 40%;
+  }
+
+  .md\:max-w-\[45\%\] {
+    max-width: 45%;
+  }
+
   .md\:flex-row {
     flex-direction: row;
   }
 
   .md\:flex-row-reverse {
     flex-direction: row-reverse;
+  }
+
+  .md\:items-start {
+    align-items: flex-start;
   }
 
   .md\:justify-between {
@@ -998,6 +1056,34 @@ img {
     gap: 0.75rem;
   }
 
+  .md\:gap-16 {
+    gap: 4rem;
+  }
+
+  .md\:space-x-5 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(1.25rem * var(--tw-space-x-reverse));
+    margin-left: calc(1.25rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .md\:space-x-10 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(2.5rem * var(--tw-space-x-reverse));
+    margin-left: calc(2.5rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .md\:space-x-20 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(5rem * var(--tw-space-x-reverse));
+    margin-left: calc(5rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .md\:space-x-16 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(4rem * var(--tw-space-x-reverse));
+    margin-left: calc(4rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
   .md\:bg-contain {
     background-size: contain;
   }
@@ -1009,6 +1095,11 @@ img {
   .md\:py-20 {
     padding-top: 5rem;
     padding-bottom: 5rem;
+  }
+
+  .md\:py-\[3\.4rem\] {
+    padding-top: 3.4rem;
+    padding-bottom: 3.4rem;
   }
 
   .md\:text-7xl {
