@@ -480,6 +480,18 @@ h2 {
   }
 }
 
+/* Animate a marker on the map */
+
+@keyframes fade {
+  from {
+    opacity: 0.5;
+  }
+}
+
+.blinking {
+  animation: fade 1s infinite alternate;
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -580,6 +592,30 @@ h2 {
   --tw-backdrop-sepia:  ;
 }
 
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.left-0 {
+  left: 0px;
+}
+
+.top-0 {
+  top: 0px;
+}
+
+.z-0 {
+  z-index: 0;
+}
+
+.z-10 {
+  z-index: 10;
+}
+
 .my-8 {
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -605,28 +641,32 @@ h2 {
   height: 20rem;
 }
 
-.min-h-48 {
-  min-height: 12rem;
+.h-\[29vh\] {
+  height: 29vh;
 }
 
-.min-h-\[29vh\] {
-  min-height: 29vh;
+.h-\[30rem\] {
+  height: 30rem;
+}
+
+.h-\[90vh\] {
+  height: 90vh;
+}
+
+.max-h-\[50rem\] {
+  max-height: 50rem;
+}
+
+.min-h-48 {
+  min-height: 12rem;
 }
 
 .min-h-\[30rem\] {
   min-height: 30rem;
 }
 
-.min-h-\[90vh\] {
-  min-height: 90vh;
-}
-
 .w-\[16\.4rem\] {
   width: 16.4rem;
-}
-
-.max-w-\[16\.4rem\] {
-  max-width: 16.4rem;
 }
 
 @keyframes bg {
@@ -764,6 +804,11 @@ h2 {
   opacity: 0.8;
 }
 
+.grayscale {
+  --tw-grayscale: grayscale(100%);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
 .wrapper {
   padding-inline: 1rem;
   max-width: 70rem;
@@ -850,6 +895,14 @@ img {
     height: 25rem;
   }
 
+  .md\:h-\[84vh\] {
+    height: 84vh;
+  }
+
+  .md\:h-\[96vh\] {
+    height: 96vh;
+  }
+
   .md\:max-h-fit {
     max-height: -moz-fit-content;
     max-height: fit-content;
@@ -861,14 +914,6 @@ img {
 
   .md\:min-h-\[45rem\] {
     min-height: 45rem;
-  }
-
-  .md\:min-h-\[84vh\] {
-    min-height: 84vh;
-  }
-
-  .md\:min-h-\[96vh\] {
-    min-height: 96vh;
   }
 
   .md\:max-w-\[24\.8rem\] {
@@ -955,8 +1000,8 @@ img {
     display: flex;
   }
 
-  .lg\:min-h-\[72vh\] {
-    min-height: 72vh;
+  .lg\:h-\[72vh\] {
+    height: 72vh;
   }
 
   .lg\:max-w-\[22rem\] {

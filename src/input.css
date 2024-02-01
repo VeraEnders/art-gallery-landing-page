@@ -32,6 +32,7 @@ img {
     font-weight: 900;
     text-transform: uppercase;
   }
+
   h1, h2, h3 {
     color: var(--clr-text-dark);
   }
@@ -41,11 +42,21 @@ img {
     line-height: 2.9rem;
     letter-spacing: 0.6px;
   }
+
   @media only screen and (min-width: 1024px) {
     h2 {
       font-size: 3.7rem;
       line-height: 1;
     }
+  }
+  
+  /* Animate a marker on the map */
+  @keyframes fade { 
+    from { opacity: 0.5; } 
+  }
+
+  .blinking {
+    animation: fade 1s infinite alternate;
   }
 }
 

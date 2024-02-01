@@ -8,12 +8,18 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
   <link href="../dist/output.css" rel="stylesheet">
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+  <!-- Include Leaflet.Grayscale JS -->
+  <script src="./leaflet-grayscale.js"></script>
 
   <title>Art Gallery Website</title>
 </head>
 <body>
-  <header class="min-h-[90vh] | md:min-h-[96vh] md:relative lg:min-h-[72vh] lg:bg-gradient-to-l from-white from-50% to-dark to-50%">
-    <div class="animate-showBackground min-h-[29vh] bg-center bg-cover bg-no-repeat | md:min-h-[84vh] md:bg-contain md:bg-[left_-1.3rem_top] lg:min-h-[72vh] lg:bg-center" style="background-image: url('../assets/img/hero.jpg')">
+  <header class="h-[90vh] max-h-[50rem] | md:h-[96vh] md:relative lg:h-[72vh] lg:bg-gradient-to-l from-white from-50% to-dark to-50%">
+    <div class="h-[29vh] max-h-[50rem] bg-center bg-cover bg-no-repeat | md:h-[84vh] md:bg-contain md:bg-[left_-1.3rem_top] lg:h-[72vh] lg:bg-center animate-showBackground" style="background-image: url('../assets/img/hero.jpg')">
     </div>
     <div class="wrapper">
       <div class="md:absolute md:top-28 md:right-12 lg:top-[19.5%] lg:left-[11.6%] 2xl:inset-x-auto">
@@ -69,10 +75,16 @@
       </div>
     </section>
 
-    <section id="map">
-      <div class="map-container">
+    <section>
+      <div class="wrapper relative">
+        <div class="absolute top-0 left-0 z-10 text-white text-xl tracking-[.15em] ">
+          <a href="#" class="py-6 px-8 bg-dark hover:text-dark hover:bg-accent">Our location</a>
+        </div>
+      </div>
+      <div id="map" class="h-[30rem] z-0">
         <!-- Interactive Map Goes Here -->
       </div>
+
       <div class="location-info">
         <h2 class="location-title">Our location</h2>
         <h3 class="location-subtitle">99 king street</h3>
@@ -103,5 +115,7 @@
       </a>
     </div>
   </footer>
+
+  <script src="./script.js"></script>
 </body>
 </html>
