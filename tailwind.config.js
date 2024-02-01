@@ -12,8 +12,8 @@ module.exports = {
     extend: {
       keyframes: {
         bg: {
-          'from': { transform: 'translateY(-110vh)' },
-          'to': { transform: 'translateY(0)' },
+          'from': { transform: 'translateX(-110vw)' },
+          'to': { transform: 'translateX(0)' },
         }
       },
       animation: {
