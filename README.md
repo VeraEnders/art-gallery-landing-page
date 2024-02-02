@@ -3,7 +3,7 @@ Responsive one-page Art Gallery website with an interactive map powered by Leafl
 
 | Desktop | Mobile |
 | --- | --- |
-| <img src="./assets/design/preview-desktop.png" alt="Art Gallery website desktop preview" width=300>  | <img src="./assets/design/preview-mobile.png" alt="Art Gallery website mobile preview" width=200> |
+| <img src="./assets/design/preview-desktop.png" alt="Art Gallery website desktop preview"> | <img src="./assets/design/preview-mobile.png" alt="Art Gallery website mobile preview"> |
 
 <div align="center">
   <h2><a href="https://veraenders.github.io/art-gallery-website/">Live</a>
