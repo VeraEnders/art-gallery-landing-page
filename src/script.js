@@ -15,7 +15,7 @@ L.tileLayer.grayscale('https://tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(ma
 
 // Add the marker
 var myIcon = L.icon({
-  iconUrl: '../assets/icons/icon-location.svg',
+  iconUrl: './assets/icons/icon-location.svg',
   iconSize: [45, 55],
   iconAnchor: [22, 94],
   popupAnchor: [-3, -76],
