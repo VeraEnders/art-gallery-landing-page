@@ -3,9 +3,136 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./assets/icons/icon-location.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <link href="./src/output.css" rel="stylesheet">
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+  <!-- Include Leaflet.Grayscale JS -->
+  <script src="./src/leaflet-grayscale.js"></script>
+
   <title>Art Gallery Website</title>
 </head>
 <body>
+  <header class="h-[90vh] max-h-[50rem] | md:h-[96vh] md:relative lg:h-[72vh] lg:bg-gradient-to-l from-white from-50% to-dark to-50%">
+    <div class="h-[29vh] max-h-[50rem] bg-center bg-cover bg-no-repeat | md:h-[84vh] md:bg-contain md:bg-[left_-1.3rem_top] lg:h-[72vh] lg:bg-center animate-showBackground" style="background-image: url('./assets/img/hero.jpg')">
+    </div>
+    <div class="wrapper">
+      <div class="md:absolute md:top-28 md:right-12 lg:top-[19.5%] lg:left-[11.6%] 2xl:inset-x-auto">
+        <div class="lg:flex lg:gap-[19rem]">
+          <div class="my-8 | md:my-9">
+            <h1 class="text-6xl leading-[3.5rem] | md:text-7xl md:leading-[4rem] lg:text-white lg:mix-blend-difference xl:text-8xl xl:leading-[5.4rem]">Modern <br> Art Gallery</h1>
+          </div>
+          <div>
+            <p class="md:mt-[3.2rem] md:max-w-xs lg:mt-[1.9rem] lg:max-w-[22rem] lg:text-2xl lg:leading-8 lg:tracking-[-0.9px]">
+              The arts in the collection of the Modern Art Gallery all started from a spark of inspiration. Will these pieces inspire you? Visit us and find out.
+            </p>
+
+            <!-- Button -->
+            <div class="my-8 | md:my-12 lg:mt-16 lg:mr-20">
+              <div class="flex justify-between w-[16.4rem] text-white text-xl tracking-[.15em] bg-dark hover:text-dark hover:bg-accent">
+                <a href="#map" class="py-6 px-8">Our location</a>
+                <a href="#map" class="p-6 bg-accent">
+                  <svg  width="10" height="24" xmlns="http://www.w3.org/2000/svg"><path stroke="#FFF" fill="none" d="m1 0 8 12-8 12"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
   
+  <main>
+    <!-- Gallery -->
+    <section class="mb-32">
+      <div class="wrapper">
+        <div class="flex flex-col gap-7 md:flex-row-reverse md:mt-6 md:gap-20 lg:mt-[11.4rem] lg:gap-28">
+          <img class="h-80 md:h-[25rem] md:max-w-[24.8rem] lg:max-w-full" src="./assets/img/grid-1.jpg" alt="Gallery photo">
+          <div class="md:mt-8 lg:mt-16">
+            <h2>Your day at the gallery</h2>
+            <p class="mt-5 md:mt-[1.55rem] lg:text-2xl lg:mt-8">
+              Wander through our distinct collections and find new about our artists. Dive into the details of their creative process.
+            </p>
+          </div>
+        </div>
+        <div class="mt-16 flex flex-col gap-5 md:mt-2 md:flex-row md:gap-3 lg:mt-8 lg:gap-8">
+          <img class="min-h-[30rem] object-bottom md:min-h-[45rem] md:max-w-[24.8rem] lg:max-w-[39.4rem]" src="./assets/img/grid-2.jpg" alt="Gallery photo">
+          <div class="flex flex-col gap-5 md:gap-3 md:justify-between">
+            <img class="min-h-48 object-center md:max-h-fit md:min-h-80" src="./assets/img/grid-3.jpg" alt="Gallery photo">
+            <div class="px-6 py-12 bg-dark md:py-20 lg:px-12">
+              <h2 class="text-white">Come & Be inspired</h2>
+              <p class="pt-6 text-white opacity-80 lg:text-2xl">
+                We’re excited to welcome you to our gallery and see how our collections influence you.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <!-- Map -->
+      <div class="wrapper relative">
+        <div class="absolute top-0 left-0 z-10 text-white text-xl tracking-[.15em] ">
+          <a href="#" class="py-6 px-8 bg-dark hover:text-dark hover:bg-accent">Our location</a>
+        </div>
+      </div>
+      <div id="map" class="h-[30rem] z-0">
+        <!-- Interactive Map Goes Here -->
+      </div>
+
+      <!-- Our Location -->
+      <div class="wrapper">
+        <div class="my-16 sm:flex sm:justify-between">
+          <h2 class="pb-8">Our <br> location</h2>
+          <div class="basis-1/2">
+            <h3 class="text-4xl text-accent">99 king street</h3>
+            <p> Newport <br>RI 02840 <br>United States of America</p>
+            <p class="pt-4">
+              Our newly opened gallery is located near the Edward King House on 99 King Street, the Modern Art Gallery is free to all visitors and open seven days a week from 8am to 9pm.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark">
+    <div class="wrapper">
+      <div class="py-12 md:py-[3.4rem] md:flex md:justify-between md:items-start lg:py-20">
+
+        <!-- Logo + Description -->
+        <div class="md:flex md:space-x-16 md:items-start lg:space-x-36">
+          <a href="#" class="hover:opacity-85">
+            <img class="md:w-28 lg:w-40" src="./assets/icons/logo-light.svg" alt="Gallery Logo">
+          </a>
+          <p class="my-10 max-w-[90%] text-white font-extralight text-base leading-relaxed md:my-0 md:max-w-[45%]">
+            The Modern Art Gallery is free to all visitors and open seven days a week from 8am to 9pm. Find us at 99 King Street, Newport, USA.
+          </p>
+        </div>
+
+        <!-- Socials -->
+        <div class="socials | flex gap-5 items-center">
+          <a href="#" class="facebook">
+            <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg"><path  d="M18.896 0H1.104C.494 0 0 .494 0 1.104v17.793C0 19.506.494 20 1.104 20h9.58v-7.745H8.076V9.237h2.606V7.01c0-2.583 1.578-3.99 3.883-3.99 1.104 0 2.052.082 2.329.119v2.7h-1.598c-1.254 0-1.496.597-1.496 1.47v1.928h2.989l-.39 3.018h-2.6V20h5.098c.608 0 1.102-.494 1.102-1.104V1.104C20 .494 19.506 0 18.896 0Z"/></svg>
+          </a>
+          <a href="#" class="instagram">
+            <svg  width="20" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M10 1.802c2.67 0 2.987.01 4.042.059 2.71.123 3.975 1.409 4.099 4.099.048 1.054.057 1.37.057 4.04 0 2.672-.01 2.988-.057 4.042-.124 2.687-1.387 3.975-4.1 4.099-1.054.048-1.37.058-4.041.058-2.67 0-2.987-.01-4.04-.058-2.718-.124-3.977-1.416-4.1-4.1-.048-1.054-.058-1.37-.058-4.041 0-2.67.01-2.986.058-4.04.124-2.69 1.387-3.977 4.1-4.1 1.054-.048 1.37-.058 4.04-.058ZM10 0C7.284 0 6.944.012 5.877.06 2.246.227.227 2.242.061 5.877.01 6.944 0 7.284 0 10s.012 3.057.06 4.123c.167 3.632 2.182 5.65 5.817 5.817 1.067.048 1.407.06 4.123.06s3.057-.012 4.123-.06c3.629-.167 5.652-2.182 5.816-5.817.05-1.066.061-1.407.061-4.123s-.012-3.056-.06-4.122C19.777 2.249 17.76.228 14.124.06 13.057.01 12.716 0 10 0Zm0 4.865a5.135 5.135 0 1 0 0 10.27 5.135 5.135 0 0 0 0-10.27Zm0 8.468a3.333 3.333 0 1 1 0-6.666 3.333 3.333 0 0 1 0 6.666Zm5.338-9.87a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4Z"/></svg>
+          </a>
+          <a href="#" class="twitter">
+            <svg  width="20" height="17" xmlns="http://www.w3.org/2000/svg"><path d="M20 2.172a8.192 8.192 0 0 1-2.357.646 4.11 4.11 0 0 0 1.805-2.27 8.22 8.22 0 0 1-2.606.996A4.096 4.096 0 0 0 13.847.248c-2.65 0-4.596 2.472-3.998 5.037A11.648 11.648 0 0 1 1.392 1a4.109 4.109 0 0 0 1.27 5.478 4.086 4.086 0 0 1-1.858-.513c-.045 1.9 1.318 3.679 3.291 4.075a4.113 4.113 0 0 1-1.853.07 4.106 4.106 0 0 0 3.833 2.849A8.25 8.25 0 0 1 0 14.658a11.616 11.616 0 0 0 6.29 1.843c7.618 0 11.923-6.434 11.663-12.205A8.354 8.354 0 0 0 20 2.172Z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./src/script.js"></script>
 </body>
 </html>
