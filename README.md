@@ -1,9 +1,20 @@
 <h1 align="center">Art Gallery website</h1> 
 Responsive one-page Art Gallery website with an interactive map powered by Leaflet, styled using Tailwind CSS
 
-| Desktop | Mobile |
-| --- | --- |
-| <img src="./assets/design/preview-desktop.png" alt="Art Gallery website desktop preview"> | <img src="./assets/design/preview-mobile.png" alt="Art Gallery website mobile preview"> |
+<table >
+  <tr>
+    <th>Desktop</th>
+    <th>Mobile</th>
+  </tr>
+  <tr style="background-color: #B3B3B3">
+    <td> 
+      <img src="./assets/design/preview-desktop.png" alt="Art Gallery website desktop preview">
+    </td>
+    <td>
+      <img src="./assets/design/preview-mobile.png" alt="Art Gallery website mobile preview">
+    </td>
+  </tr>
+</table>
 
 <div align="center">
   <h2><a href="https://veraenders.github.io/art-gallery-website/">Live</a>
